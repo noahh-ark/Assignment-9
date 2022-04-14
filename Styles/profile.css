@@ -8,6 +8,10 @@
     box-sizing: border-box;
 }
 
+h6 {
+  opacity: 0;
+}
+
 img {
     display: block;
     width: 100%;
