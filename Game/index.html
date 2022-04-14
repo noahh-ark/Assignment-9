@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get the turtle to the apples to feed him!">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <!-- Lobster Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Styles/main.css">
+    <link rel="stylesheet" href="../Styles/game.css">
+
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./Favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./Favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./Favicon/favicon-16x16.png">
+    <link rel="manifest" href="./Favicon/site.webmanifest">
+    <link rel="mask-icon" href="./Favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="./Favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="./Favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Game</title>
+
+</head>
+<body class="game">
+    <div class="wrapper"></div>
+    <header>
+        <nav>
+            <div class="menu-icon">
+                <svg viewbox="0 0 60 60">
+                  <line x1="5%" y1="50%" x2="95%" y2="50%" />
+                  <line x1="5%" y1="50%" x2="95%" y2="50%" />
+                </svg>
+            </div>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="#">Game</a></li>
+                <li><a href="../Profile/index.html">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div>
+        <div class="head">
+            <h1>Game</h1>
+        </div>
+    </div>
+
+    <main>
+        <div class="loader">
+            <img class="turtle" src="../Images/Icons/Loader-Turtle.png" width="100" alt="Tom the turtle">
+            <img class="apple" src="../Images/Icons/Loader-Apple.png" width="30" alt="Apple">
+            <p>Loading...</p>
+        </div>
+        <div class="playspace">
+            <img class="player" src="../Images/Icons/Turtle-Icon-5.png" alt="Player's Turtle">
+            <a class="button">Play</a>
+            <img class="goal" src="../Images/Icons/Apple-Icon.png" width="30" alt="Goal Apple">
+        </div>
+        
+    </main>
+    <script>
+        document.querySelector(".menu-icon").addEventListener("click", function () {
+            this.parentElement.classList.toggle("close");
+        });
+
+        document.querySelector(".button").addEventListener("click", function () {
+            this.parentElement.classList.toggle("gone");
+        });
+
+        for (var i = 0; i < 150; i++) {
+            create(i);
+        }
+
+        function create(i) {
+            var width = Math.random() * 8;
+            var height = width * 0.4;
+            var colourIdx = Math.ceil(Math.random() * 3);
+            var colour = "red";
+            switch(colourIdx) {
+                case 1:
+                colour = "yellow";
+                break;
+                case 2:
+                colour = "blue";
+                break;
+                default:
+                colour = "red";
+            }
+            $('<div class="confetti-'+i+' '+colour+'"></div>').css({
+                "width" : width+"px",
+                "height" : height+"px",
+                "top" : -Math.random()*20+"%",
+                "left" : Math.random()*100+"%",
+                "opacity" : Math.random()+0.5,
+                "transform" : "rotate("+Math.random()*360+"deg)"
+            }).appendTo('.wrapper');  
+            
+            drop(i);
+        }
+
+        function drop(x) {
+            $('.confetti-'+x).animate({
+                top: "100%",
+                left: "+="+Math.random()*15+"%"
+            }, Math.random()*2000 + 2000, function() {
+                reset(x);
+            });
+        }
+
+        function reset(x) {
+            $('.confetti-'+x).animate({
+                "top" : -Math.random()*20+"%",
+                "left" : "-="+Math.random()*15+"%"
+            }, 0, function() {
+                drop(x);             
+            });
+        }
+    </script>
+</body>
+</html>

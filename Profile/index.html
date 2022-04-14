@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is a page where you build your profile.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <!-- Lobster Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Styles/main.css">
+    <link rel="stylesheet" href="../Styles/profile.css">
+
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./Favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./Favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./Favicon/favicon-16x16.png">
+    <link rel="manifest" href="./Favicon/site.webmanifest">
+    <link rel="mask-icon" href="./Favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="./Favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="./Favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Profile</title>
+
+</head>
+<body class="profile">
+    <header>
+        <nav>
+            <div class="menu-icon">
+                <svg viewbox="0 0 60 60">
+                  <line x1="5%" y1="50%" x2="95%" y2="50%" />
+                  <line x1="5%" y1="50%" x2="95%" y2="50%" />
+                </svg>
+              </div>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../Game/index.html">Game</a></li>
+                <li><a href="#">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div>
+        <div class="head">
+            <h1>Profile</h1>
+        </div>
+    </div>
+
+    <main>
+        <section class="form">
+            <img src="../Images/Icons/Turtle-Icon-1.png"/>
+            <form>
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" required>
+            
+                <label for="email">Email Address</label>
+                <input type="email" name="email" id="email" required>
+            
+                <label for="phone">Phone Number</label>
+                <input type="tel" name="phone" id="phone">
+            
+                <label for="birth-month">Birth Month/Year</label>
+                <input type="month" name="birth-month" id="birth-month">
+         
+                <fieldset>
+                    <legend>Which kinds of turtles eat apples? (Check all that apply)</legend>
+            
+                    <input type="checkbox" id="land" name="turtles" value="land">
+                    <label for="land">Land Turtles</label>
+            
+                    <input type="checkbox" id="sea" name="turtles" value="sea">
+                    <label for="sea">Sea Turtles</label>
+                    
+                    <input type="checkbox" id="tortoises" name="turtles" value="tortoises">
+                    <label for="tortoises">Tortoises</label>
+                    
+                    <input type="checkbox" id="lion" name="turtles" value="lion">
+                    <label for="lion">Lion Turtles</label>
+            
+                    <input type="checkbox" id="TMNT" name="turtles" value="TMNT">
+                    <label for="TMNT">Teenage Mutant Nija Turtles</label>
+            
+                </fieldset>
+          
+                <fieldset>
+                    <legend>What is the best name for a turtle?</legend>
+            
+                    <input type="radio" name="names" id="tom" value="tom">
+                    <label for="tom">Tom</label>
+            
+                    <input type="radio" name="names" id="ted" value="ted">
+                    <label for="ted">Ted</label>
+            
+                    <input type="radio" name="names" id="tristan" value="tristan">
+                    <label for="tristan">Tristan</label>
+            
+                    <input type="radio" name="names" id="terri" value="terri">
+                    <label for="terri">Terri</label>
+                </fieldset>
+            
+                <label for="suggestions">Other turtle names:</label>
+                <textarea name="suggestions" id="suggestions" rows="10" placeholder="T..."></textarea>
+            
+                <!-- You will often see <input type="submit"> instead of <button type="submit">. They are the same functionally, but <button> is newer and more easily styled.    -->
+                <button type="submit">Submit Now</button>
+          
+            </form>
+          </section>
+    </main>
+    <script>
+        document.querySelector(".menu-icon").addEventListener("click", function () {
+            this.parentElement.classList.toggle("close");
+        });
+    </script>
+</body>
+</html>

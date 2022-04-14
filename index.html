@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is a game where you help your turtle eat apples.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <!-- Lobster & Poppins Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Styles/main.css">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./Favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./Favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./Favicon/favicon-16x16.png">
+    <link rel="manifest" href="./Favicon/site.webmanifest">
+    <link rel="mask-icon" href="./Favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="./Favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="./Favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Turtles Eat Apples</title>
+
+</head>
+
+<body>
+    <!-- <div class="main-menu">
+        <div class="menu-icon">
+          <svg viewbox="0 0 60 60" width="60px" height="60px">
+            <line x1="5%" y1="50%" x2="95%" y2="50%" />
+            <line x1="5%" y1="50%" x2="95%" y2="50%" />
+          </svg>
+        </div>
+      </div> -->
+    <header>
+        <nav>
+            <div class="menu-icon">
+                <svg viewbox="0 0 60 60">
+                  <line x1="5%" y1="50%" x2="95%" y2="50%" />
+                  <line x1="5%" y1="50%" x2="95%" y2="50%" />
+                </svg>
+              </div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="./Game/index.html">Game</a></li>
+                <li><a href="./Profile/index.html">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="hero">
+        <picture>
+            <source srcset="./Images/turtle-6-2.jpg" media="(min-width: 901px)">
+            <source srcset="./Images/turtle-6-900.jpg" media="(min-width: 501px)">
+            <source srcset="./Images/turtle-6-500.jpg" media="(max-width: 500px)">
+            <img src="./Images/turtle-6-2.jpg" alt="hero turtle">
+        </picture>
+        <div class="head">
+            <h1>Turtles Eat Apples</h1>
+        </div>
+    </div>
+    
+    
+    <main>
+                
+        <h2>Choose Your Turtle:</h2>
+        
+        <div class="cards">
+            <div class="card">
+                <div class="image-wrapper">
+                    <a href="./Game/index.html">
+                    <img src="Images/Turtle-Icon-1.JPG"  alt="Turtle-Icon-1">
+                    </a>
+                </div>
+                <div class="overlay">Tom</div>
+            </div>
+    
+            <div class="card">
+                <div class="image-wrapper">
+                    <a href="./Game/index.html">
+                    <img src="Images/Turtle-Icon-3.JPG"  alt="Turtle-Icon-3">
+                    </a>
+                </div>
+                <div class="overlay">Ted</div>
+            </div>
+    
+            <div class="card">
+                <div class="image-wrapper">
+                    <a href="./Game/index.html">
+                    <img src="Images/Turtle-Icon-5.JPG"  alt="Turtle-Icon-5">
+                    </a>
+                </div>
+                <div class="overlay">Tristan</div>
+            </div>
+    
+            <div class="card">
+                <div class="image-wrapper">
+                    <a href="./Game/index.html">
+                    <img src="Images/Turtle-Icon-6.JPG"  alt="Turtle-Icon-6">
+                    </a>
+                </div>
+                <div class="overlay">Terri</div>
+            </div>
+        </div>
+
+        <article class="panel">
+            <div class="text-content left">
+                <h3>What Is This?</h3>
+                <img class="svg" src="./Images/turtlesvg.svg" alt="other turtle">
+                <p>This is a game where you help your turtle eat apples.</p>
+                <p>Food Chain:</p>
+                    <ol>
+                        <li>Turtles</li>
+                        <li>Apples
+                            <ul>
+                                <li>(Sunlight?)</li>
+                            </ul>
+                        </li>
+                    </ol>
+                    <dl>
+                    <dt>Turtles
+                        <dd>Animals with shells</dd>
+                    <dt><a href="https://en.wikipedia.org/wiki/Apple" target="blank">Apples</a>
+                        <dd>Harmless fruit</dd>
+                    </dl>
+                    <a class="button" href="./Game/index.html">
+                        <span>Play</span><span>Now</span>
+                    </a>
+            </div>
+        </article>
+
+        <div class="figure">
+            <figure class="figure-turtle">
+                <img src="./Images/Red-Eared-Turtle.jpg" width="500" height="320" loading="lazy" alt="other turtle">
+                <figcaption>Turtle</figcaption>
+            </figure>
+            <figure>
+                <img src="./Images/apples.jpg" width="500" height="320" loading="lazy" alt="apples">
+                <figcaption>Apples</figcaption>
+            </figure>
+        </div>
+
+        <article class="panel">
+            <div class="text-content left">
+                <h4>How This Started</h4>
+                <p><strong>Turtles Eat Apples</strong> began with an assignment for a Web Design class where the objective was to build a simple website.</p>
+                <a class="button" href="./Game/index.html">
+                    <span>Play</span><span>Now</span>
+                </a>
+            </div>
+            <div class="image-wrapper">
+                <img src="./Images/TNRB.jpg" width="400" height="273" loading="lazy" alt="Tanner Building">
+            </div>
+        </article>
+    </main>
+
+    <aside>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint illo sit voluptates at, ratione nisi commodi officiis ea quod molestias reprehenderit architecto iure, a quasi nulla quis consectetur doloremque totam.</p>
+    </aside>
+    <footer>
+        <p>Turtles Eat Apples © 2022 by <em>Noah Steven Clark, LLC.</em> All rights reserved.</p>
+    </footer>
+    <script>
+        document.querySelector(".menu-icon").addEventListener("click", function () {
+            this.parentElement.classList.toggle("close");
+        });
+    </script>
+</body>
+
+</html>
