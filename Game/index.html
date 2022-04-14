@@ -29,6 +29,26 @@
 
 </head>
 <body class="game">
+
+
+    <div class="container">
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+         <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+      </div>
+
+
+
     <header>
         <nav>
             <div class="menu-icon">
@@ -70,6 +90,7 @@
 
         document.querySelector(".button").addEventListener("click", function () {
             this.parentElement.classList.toggle("gone");
+            document.querySelector(".game").classList.toggle("gone");
         });
 
         
