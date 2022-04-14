@@ -24,7 +24,6 @@ h1 {
 }
 
 .goal img {
-    /* display: inline-block; */
     display: flex;
     max-width: 30%;
     height: auto;
@@ -59,28 +58,6 @@ a.button {
     animation-delay: 1.5s;
 }
 
-/* Confetti */
-/* body {
-    margin: 0;
-    overflow: hidden;
-}
-.wrapper {
-    position: relative;
-    min-height: 100vh;
-}
-[class|="confetti"] {
-    position: absolute;
-}
-.red {
-    background-color: #d13447;
-}
-.yellow {
-    background-color: #ffbf00;
-}
-.blue {
-    background-color: #263672;
-} */
-
 .loader {
     display: flex;
     height: 60vh;
@@ -100,8 +77,6 @@ a.button {
 
 .turtle {
     position: absolute;
-    /* opacity: 0; */
-    /* margin-top: 2rem; */
     animation: go-around 4s linear forwards;
     animation-iteration-count: 2;
     animation-delay: 0.6s;
@@ -109,18 +84,10 @@ a.button {
 .apple {
     position: absolute;
     margin-top: -1.2rem;
-    /* margin-bottom: 2rem; */
     margin-right: 2rem;
     animation: go-around 4s linear forwards;
     animation-iteration-count: 2;
 
-}
-
-.player {
-    /* animation: turn-left-up 3s linear forwards infinite; */
-    /* animation-delay: 4s; */
-    /* animation: turn-right-down 3s linear forwards infinite; */
-    /* animation: down-row 3s linear forwards; */
 }
 
 :root {
@@ -233,9 +200,6 @@ a.button {
 }
 
 @media (min-width: 700px) {
-    /* :root {
-        --gridsquare: 6.2rem;
-    } */
     .playspace {
         margin-top: 6rem;
     }
@@ -244,19 +208,7 @@ a.button {
     }
 }
 
-@media (min-width: 900px) {
-    /* :root {
-        --gridsquare: 8rem;
-    } */
-}
-
 @media (min-width: 1100px) {
-    /* :root {
-        --gridsquare: 9rem;
-    } */
-    .playspace {
-        /* margin-top: 8rem; */
-    }
     h1 {
         font-size: 7rem;
     }
